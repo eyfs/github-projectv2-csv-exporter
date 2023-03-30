@@ -47,5 +47,6 @@ export declare class ProjectItem {
     getMilestone(): string | undefined;
     getNumber(): string | undefined;
     getTitle(): string | undefined;
+    getDescription(): string | undefined;
     getUrl(): string | undefined;
 }
