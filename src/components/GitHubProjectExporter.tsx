@@ -8,7 +8,7 @@ import { fetchProjectItems, fetchProjects, Project, Projects } from '../api/gith
 import { settingsPath } from './GitHubProjectExporterSettings';
 import { useExporterSettings } from './useExporterSettings';
 
-export const exporterPath = '/github-projectv2-csv-exporter/?path=/story/tools-github-project-exporter--exporter';
+export const exporterPath = '/?path=/story/tools-github-project-exporter--exporter';
 
 export interface GitHubProjectExporterProps extends DivProps {}
 

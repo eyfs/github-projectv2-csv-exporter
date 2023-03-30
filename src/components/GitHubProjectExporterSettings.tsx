@@ -6,7 +6,7 @@ import { DivProps } from 'react-html-props';
 import { exporterPath } from './GitHubProjectExporter';
 import { useExporterSettings } from './useExporterSettings';
 
-export const settingsPath = '/github-projectv2-csv-exporter/?path=/story/tools-github-project-exporter--settings';
+export const settingsPath = '/?path=/story/tools-github-project-exporter--settings';
 export interface GitHubExporterSettingsProps extends DivProps {}
 
 /**
