@@ -108,8 +108,10 @@ export const GitHubProjectExporter = (props: GitHubProjectExporterProps) => {
             .map((item) => {
               const rawTitle = item.getTitle() ?? '';
               const rawStatus = item.getStatus() ?? '';
+              const rawDescription = item.getDescription() ?? '';
               return {
                 Title: (removeTitleEmojis ? rawTitle.split(emojiRegex()).join('') : rawTitle).trim(),
+                Description: item.getDescription() ?? '',
                 Number: item.getNumber() ?? '',
                 Status: (removeStatusEmojis ? rawStatus.split(emojiRegex()).join('') : rawStatus).trim(),
                 Assignees:

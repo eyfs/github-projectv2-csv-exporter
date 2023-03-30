@@ -124,11 +124,11 @@ export class Project {
 }
 
 export const fetchProjectItems = async (
-  login: string,
-  isOrg: boolean,
-  projectNumber: number,
-  token: string,
-  progress?: (loaded: number, total: number) => void,
+    login: string,
+    isOrg: boolean,
+    projectNumber: number,
+    token: string,
+    progress?: (loaded: number, total: number) => void,
 ): Promise<ProjectItem[]> => {
   const PROJECT_ITEMS_QUERY = gql`
     query ProjectQuery(
@@ -149,6 +149,7 @@ export const fetchProjectItems = async (
                 content {
                   ... on Issue {
                     title
+                    body
                     url
                     issueState: state
                     assignees(first: $assigneesFirst) {
@@ -337,6 +338,9 @@ export class ProjectItem {
   }
   public getTitle(): string | undefined {
     return this.node?.content?.title;
+  }
+  public getDescription(): string | undefined {
+    return this.node?.content?.body;
   }
   public getUrl(): string | undefined {
     return this.node?.content?.url;
