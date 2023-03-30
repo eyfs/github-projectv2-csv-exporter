@@ -149,7 +149,6 @@ export const fetchProjectItems = async (
                 content {
                   ... on Issue {
                     title
-                    body
                     url
                     issueState: state
                     assignees(first: $assigneesFirst) {
@@ -338,9 +337,6 @@ export class ProjectItem {
   }
   public getTitle(): string | undefined {
     return this.node?.content?.title;
-  }
-  public getDescription(): string | undefined {
-    return this.node?.content?.body;
   }
   public getUrl(): string | undefined {
     return this.node?.content?.url;

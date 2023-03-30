@@ -53,7 +53,6 @@ const fetchProjects = (login, isOrg, token) => __awaiter(void 0, void 0, void 0,
           edges {
             node {
               title
-              body
               number
               url
               items {
@@ -363,10 +362,6 @@ class ProjectItem {
     getTitle() {
         var _a, _b;
         return (_b = (_a = this.node) === null || _a === void 0 ? void 0 : _a.content) === null || _b === void 0 ? void 0 : _b.title;
-    }
-    getDescription() {
-        var _a, _b;
-        return (_b = (_a = this.node) === null || _a === void 0 ? void 0 : _a.content) === null || _b === void 0 ? void 0 : _b.body;
     }
     getUrl() {
         var _a, _b;
